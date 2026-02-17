@@ -12,7 +12,7 @@ fill_ram:
     mov $9, %ecx  # Set the loop counter to 9 (for addresses 50h to 58h)
 
 fill_loop:
-    movb $0xFF, (%rsi)  # Store FFh at the memory location pointed to by rsi
+    movb $0x00, (%rsi)  # Store 00h at the memory location pointed to by rsi
     inc %rsi  # Move to the next memory location
     dec %ecx  # Decrement the loop counter
     jnz fill_loop  # Jump back to the start of the loop if counter is not zero
